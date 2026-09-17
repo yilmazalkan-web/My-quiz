@@ -1,0 +1,54 @@
+import random
+
+win = False
+
+while win == False:
+    print("press 1 for rock")
+    print("press 2 for scissors")
+    print("press 3 for paper")
+
+    playerinput = int(input("what is your choice"))
+
+    computerinput = random.randrange(1,3)
+
+    if (playerinput == 1) and (computerinput == 1) :
+                  win == False
+                  print("Tie both players played rock")
+
+    if (playerinput == 2) and (computerinput == 2) :
+                  win == False
+                  print("Tie both players played scissors")
+
+    if (playerinput == 3) and (computerinput == 3) :
+                  win == False
+                  print("Tie both players played paper")
+
+    if (playerinput == 1) and (computerinput == 2) :
+                  win == False
+                  print("You win player 2 played scissors")
+
+    if (playerinput == 2) and (computerinput == 3):
+                  win == False
+                  print("You win player 2 played paper")
+
+    if (playerinput == 3) and (computerinput == 1) :
+                  win == False
+                  print("You win player 2 played rock")
+
+    if (playerinput == 1) and (computerinput == 3) :
+                  win == False
+                  print("You lose player 2 played paper")
+
+    if (playerinput == 2) and (computerinput == 1) :
+                  win == False
+                  print("You lose player 2 played rock")
+
+    if (playerinput == 3) and (computerinput == 2) :
+                  win == False
+                  print("You lose player 2 played scissors")
+
+    play_again = input("Do you want to play again? (yes/no)")
+    
+    if play_again != "yes" and play_again != "y":
+        print("Thanks for playing! Goodbye.")
+        break
